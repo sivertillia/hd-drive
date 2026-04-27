@@ -56,7 +56,11 @@ async function typeFromClipboard(): Promise<void> {
 
   for (const char of text) {
     if (!typing) break; // can be cancelled
-    robot.typeString(char);
+    if (char === '\n') {
+      robot.keyTap('enter', ['shift']);
+    } else if (char !== '\r') {
+      robot.typeString(char);
+    }
     const delay = TYPE_DELAY_MIN + Math.random() * (TYPE_DELAY_MAX - TYPE_DELAY_MIN);
     await sleep(delay);
   }
