@@ -1,0 +1,19 @@
+{
+  "name": "hd-drive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "node-global-key-listener": "^0.3.0",
+    "robotjs": "^0.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
